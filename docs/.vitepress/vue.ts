@@ -1,7 +1,7 @@
 export default [
   {
     text: "Vuejs OnePage",
-    link: "/vue/index",
+    link: "/vue/",
   },
   {
     text: "那些年，被问烂了的 Vuejs 面试题",

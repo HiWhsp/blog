@@ -1,9 +1,10 @@
 import { DefaultTheme } from "vitepress";
 import vueConfig from "./vue";
+import vue3Config from "./vue3";
 import engineerConfig from "./engineer";
 import reactConfig from "./react";
 import hcConfig from "./hc";
-export const defaultSidebar: DefaultTheme.Sidebar = [
+export const defaultSidebar = [
   {
     text: "Introduction",
     collapsible: true,
@@ -17,6 +18,7 @@ export const defaultSidebar: DefaultTheme.Sidebar = [
   {
     text: "JavaScript",
     collapsible: true,
+    collapsed: true,
     items: [
       {
         text: "JavaScript",
@@ -39,6 +41,7 @@ export const defaultSidebar: DefaultTheme.Sidebar = [
   {
     text: "TypeScript",
     collapsible: true,
+    collapsed: true,
     items: [
       {
         text: "TypeScript OnePage",
@@ -50,6 +53,7 @@ export const defaultSidebar: DefaultTheme.Sidebar = [
   {
     text: "前端工程化",
     collapsible: true,
+    collapsed: true,
     items: engineerConfig,
   },
 
@@ -60,6 +64,12 @@ export const defaultSidebar: DefaultTheme.Sidebar = [
     items: vueConfig,
   },
   {
+    text: `Vue3的变化`,
+    collapsed: true,
+    collapsible: true,
+    items: vue3Config,
+  },
+  {
     text: `React ${reactConfig.length}篇`,
     collapsible: true,
     collapsed: true,
@@ -68,6 +78,7 @@ export const defaultSidebar: DefaultTheme.Sidebar = [
   {
     text: "前端工具",
     collapsible: true,
+    collapsed: true,
     items: [
       {
         text: "前端 JavaScript 必会工具库合集",
@@ -83,10 +94,10 @@ export const defaultSidebar: DefaultTheme.Sidebar = [
       },
     ],
   },
-
   {
     text: "algorithm",
     collapsible: true,
+    collapsed: true,
     items: [
       {
         text: "🔥刷题之探索最优解",
@@ -97,6 +108,7 @@ export const defaultSidebar: DefaultTheme.Sidebar = [
   {
     text: "interview",
     collapsible: true,
+    collapsed: true,
     items: [
       {
         text: "面试官：你还有问题要问我吗",

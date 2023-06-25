@@ -1,12 +1,10 @@
 import { resolve } from "path";
-import type { DefaultTheme } from "vitepress";
 import { defineConfig } from "vitepress";
 import { defaultSidebar } from "./defaultSidebar";
 import { generateFileSidebar } from "./file-sidebar";
 
 const r = (p: string) => resolve(__dirname, p);
 
-// generateFileSidebar(r('../useForm'))
 export default defineConfig({
   base: "/blog-home/",
   title: "hsp-blog",
@@ -28,11 +26,24 @@ export default defineConfig({
     outline: [1, 3],
     sidebar: defaultSidebar,
     nav: [
-      // {
-      //   text: 'Playground',
-      //   link: 'https://mini-anything-play.netlify.app/',
-      // },
       ...defaultSidebar.slice(1, 5),
+      {
+        text: "官网",
+        items: [
+          {
+            text: "vitepress",
+            link: "https://vitepress.dev/"
+          },
+          {
+            text: "vue",
+            link: "https://cn.vuejs.org/"
+          },
+          {
+            text: "vite",
+            link: "https://vitejs.cn/"
+          }
+        ]
+      }
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/HiWhsp" },
@@ -45,9 +56,9 @@ export default defineConfig({
       text: "Edit this page on Gitlab",
     },
     lastUpdatedText: "Last Updated",
-    localeLinks: {
-      text: "English",
-      items: [{ text: "简体中文", link: "https://netlify.app" }],
-    },
+    // localeLinks: {
+    //   text: "English",
+    //   items: [{ text: "", link: "https://vitepress.dev/" }],
+    // },
   },
 });
