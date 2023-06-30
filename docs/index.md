@@ -4,7 +4,7 @@ hero:
   name: Welcome
   text: 前端历险记
   image:
-    src: /logo.jpg
+    src: /logo1.jpg
     alt: 前端历险记
   actions:
     - theme: brand
