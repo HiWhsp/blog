@@ -26,7 +26,7 @@ export default defineConfig({
     outline: [1, 3],
     sidebar: defaultSidebar,
     nav: [
-      ...defaultSidebar.slice(1, 5),
+      ...defaultSidebar[1].items.slice(0,4),
       {
         text: "官网",
         items: [
